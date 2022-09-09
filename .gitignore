@@ -25,3 +25,6 @@ pubspec.lock
 .flutter-plugins
 .flutter-plugins-dependencies
 generated_plugin_registrant.dart
+*.iml
+melos_scrollable_positioned_list_example.iml
+melos_scrollable_positioned_list.iml
