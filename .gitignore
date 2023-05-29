@@ -13,7 +13,7 @@ build/
 *.js.map
 
 # Include when developing application packages.
-pubspec.lock
+
 
 # IDE
 .project
