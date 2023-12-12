@@ -2,10 +2,8 @@ name: scrollable_positioned_list_example
 
 publish_to: "none"
 
-
 environment:
   sdk: ">=3.0.0"
-
 
 dependencies:
   flutter:
