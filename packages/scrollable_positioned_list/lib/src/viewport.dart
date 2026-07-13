@@ -24,12 +24,14 @@ class UnboundedViewport extends Viewport {
     List<Widget> slivers = const <Widget>[],
   })  : _anchor = anchor,
         super(
+            scrollCacheExtent: cacheExtent != null
+                ? ScrollCacheExtent.pixels(cacheExtent)
+                : null,
             key: key,
             axisDirection: axisDirection,
             crossAxisDirection: crossAxisDirection,
             offset: offset,
             center: center,
-            cacheExtent: cacheExtent,
             slivers: slivers);
 
   // [Viewport] enforces constraints on [Viewport.anchor], so we need our own

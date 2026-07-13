@@ -14,7 +14,7 @@ import 'viewport.dart';
 class UnboundedCustomScrollView extends CustomScrollView {
   final bool _shrinkWrap;
 
-  const UnboundedCustomScrollView({
+  UnboundedCustomScrollView({
     Key? key,
     Axis scrollDirection = Axis.vertical,
     bool reverse = false,
@@ -31,6 +31,9 @@ class UnboundedCustomScrollView extends CustomScrollView {
   })  : _shrinkWrap = shrinkWrap,
         _anchor = anchor,
         super(
+          scrollCacheExtent: cacheExtent != null
+              ? ScrollCacheExtent.pixels(cacheExtent)
+              : null,
           key: key,
           scrollDirection: scrollDirection,
           reverse: reverse,
@@ -39,7 +42,6 @@ class UnboundedCustomScrollView extends CustomScrollView {
           physics: physics,
           shrinkWrap: false,
           center: center,
-          cacheExtent: cacheExtent,
           semanticChildCount: semanticChildCount,
           dragStartBehavior: dragStartBehavior,
           slivers: slivers,
